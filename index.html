@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="overflow-hidden">
+<!-- component -->
+<!-- Container -->
+<div id="container" class="flex flex-wrap min-h-screen w-full content-center justify-center py-10">
+  
+    <!-- Login component -->
+    <div class="flex shadow-2xl">
+      <!-- Login form -->
+      <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+        <div class="w-72">
+          <!-- Heading -->
+          <h1 class="text-xl font-semibold">Hi <b class="w-7" id="usser"></b> </h1>
+          <small class="text-gray-400">wellcome please enter your profile</small>
+  
+          <!-- Form -->
+          <form class="mt-4">
+            <div class="mb-3">
+              <label class="mb-2 block text-xs font-semibold">Ussername</label>
+              <input type="text" id="Usser" required  placeholder="Enter your ussername" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-indigo-900" />
+            </div>
+  
+            <div class="mb-3">
+              <label class="mb-2 block text-xs font-semibold">Password    </label>
+              <input type="password" required="" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-indigo-800" />
+            </div>
+  
+            <div class="mb-3 flex flex-wrap content-center ">
+                
+                <span class="text-xs text-gray-400 font-semibold ">Don't have account?</span>
+                
+                <button type="submit" href="#" class="text-xs font-semibold px-5 py-2 ms-auto hover:scale-110 hover:bg-indigo-950 transition-all duration-100 ease-out hover:text-white  text-indigo-800 ">Create account?</button>
+            </div>
+  
+            
+            
+          </form>
+  
+          <!-- Footer -->
+          <div class="text-center">
+      
+            <button type="submit" href="#" class="text-xs font-semibold px-5 py-2 hover:scale-110 hover:bg-indigo-950 transition-all duration-100 ease-out bg-indigo-800 text-white rounded">Sign up</button>
+            
+            <div class="p-5">
+            <button type="submit" href="#" onclick="dark()" id="dark" class="text-xs font-semibold px-5 py-2 hover:scale-110 hover:bg-indigo-950 transition-all duration-100 ease-out bg-black text-white rounded">Dark theme </button>
+ </div>
+        </div>
+       
+        </div>
+        
+      </div>
+
+  
+      <!-- Login banner -->
+      <div class="hidden md:flex flex-wrap  content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+        <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=400">
+      </div>
+  
+    </div>
+  
+
+    
+
+
+    <!--java-->
+<script>
+    let inpt = document.querySelector("#Usser");
+
+    let usser = document.querySelector("#usser")
+    
+    
+      const degerYakala = function(e) {
+        usser.innerHTML = e.target.value;
+      }
+    
+      inpt.addEventListener("input", degerYakala);
+
+
+
+      function dark(){
+
+       const bg = document.querySelector("#container")
+       let dark = document.querySelector("#dark")
+       
+ bg.classList.toggle("bg-black")
+ document.querySelector(dark).innerText = "light";
+
+
+      }
+
+
+    </script>
+
+
+</body>
+</html>
